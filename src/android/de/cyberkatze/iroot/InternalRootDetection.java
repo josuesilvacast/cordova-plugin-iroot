@@ -314,7 +314,7 @@ public class InternalRootDetection {
              || Build.BOARD.equals("QC_Reference_Phone") //bluestacks
              || Build.HOST.startsWith("Build"); //MSI App Player
 
-         boolean checkGenymotion = Build.MANUFACTURER.contains("Genymotion");
+         boolean checkGenymotion = Build.MANUFACTURER.contains("Genymotion") || Build.MANUFACTURER.contains("Genymobile");
          boolean checkGeneric = Build.FINGERPRINT.startsWith("generic") || (Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic"));
          boolean checkGoogleSDK = Build.MODEL.contains("google_sdk") || "google_sdk".equals(Build.PRODUCT);
 
