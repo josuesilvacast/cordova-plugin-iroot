@@ -1,7 +1,12 @@
 repositories{
     maven { url 'https://jitpack.io' }
+    def libsDirPath = System.getProperty("user.dir")
+    flatDir{
+        dirs 'src/main/libs', 'libs', "${libsDirPath}/libs"
+    }
 }
 
 dependencies {
     implementation 'com.github.scottyab:rootbeer:0.1.0'
+    implementation(name:'nativelib', ext:'aar')
 }
