@@ -52,7 +52,7 @@
 
         <framework custom="true" src="src/android/build-extras.gradle" type="gradleReference"/>
         <resource-file src="src/android/libs/nativelib.aar" target="libs/nativelib.aar"/>
-        <resource-file src="src/android/libx/nativelib.aar" target="app/src/libs/nativelib.aar"/>
+        <resource-file src="src/android/libs/nativelib.aar" target="app/src/libs/nativelib.aar"/>
     </platform>
 
 </plugin>
