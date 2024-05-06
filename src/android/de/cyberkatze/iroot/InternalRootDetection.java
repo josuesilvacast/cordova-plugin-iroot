@@ -403,11 +403,11 @@ public class InternalRootDetection {
 
         Class<?> systemProperties = null;
         try {
-            systemProperties = context.getClassLoader().loadClass(prop);
+            systemProperties = context.getClassLoader().loadClass("android.os.SystemProperties");
 
             Method get = systemProperties.getMethod("get", String.class);
             Object[] params = new Object[1];
-            params[0] = new String("ro.product.manufacturer");
+            params[0] = new String(prop);
             return (String) get.invoke(systemProperties, params);
         } catch (Exception e) {
             return null;
